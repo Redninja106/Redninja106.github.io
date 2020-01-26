@@ -1,0 +1,65 @@
+﻿* {
+    margin: 0px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+span {
+    font-style: italic;
+}
+
+button {
+    background-color: darkslategray;
+    color: white;
+    border: none;
+    display: inline;
+}
+
+.header {
+    background-color: lightgray;
+    padding: 1%;
+    text-align: center;
+    color: dimgrey;
+    border: none;
+}
+
+.navbar {
+    position: sticky;
+    background-color: darkslategray;
+    top: 0;
+    padding: 1em 0;
+}
+
+.navbar a {
+    color: lightgray;
+    text-decoration: none;
+    text-align: center;
+    display: inline;
+    background-color: darkslategray;
+    margin: 0px;
+    padding: 1em;
+}
+
+.navbar .home {
+    border-right: 1px solid;
+    border-right-color: lightgray;
+}
+
+.navbar a:hover{
+    background-color: darkgray;
+}
+
+.content {
+    display: block;
+    float: none;
+    margin: 0% 15%;
+    width: 70%;
+    height: 3000px;
+    background-color: lightgray;
+}
+
+.footer {
+    display: block;
+    background-color: darkslategray;
+    width: 100%;
+    height: 250px;
+}
