@@ -113,6 +113,7 @@ function Remove<T>(array: Array<T>, object: T): void {
 function ResetTransform() {
     resetMatrix();
     translate(width / 2, height / 2);
+    scale(3.0);
 }
 
 // ==Interface Definitions==

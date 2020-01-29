@@ -559,7 +559,7 @@ declare class p5 {
   //
   //   param "s" has invalid type: Number | p5.Vector | Array
   //
-  // scale(s: Number | p5.Vector | Array, y?: number, z?: number): p5
+  //scale(s: number, y?: number, z?: number): p5
   
   /**
    * Shears a shape around the x-axis the amount specified by the angle

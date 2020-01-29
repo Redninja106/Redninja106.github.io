@@ -112,6 +112,7 @@ function Remove(array, object) {
 function ResetTransform() {
     resetMatrix();
     translate(width / 2, height / 2);
+    scale(3.0);
 }
 // ==Class Definitions==
 // --GameObjects--
