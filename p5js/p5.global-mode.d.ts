@@ -603,7 +603,15 @@ declare function beginContour(): any;
 //
 //   param "kind" has invalid type: Number/Constant
 //
-// declare function beginShape(kind: Number/Constant): any;
+declare function beginShape(kind?: any): any;
+
+declare const POINTS: any;
+declare const LINES: any;
+declare const TRIANGLES: any;
+declare const TRIANGLE_FAN: any;
+declare const TRIANGLE_STRIP: any;
+declare const QUADS: any;
+declare const QUAD_STRIP: any;
 
 /**
  * Specifies vertex coordinates for Bezier curves.
@@ -625,7 +633,9 @@ declare function endContour(): any;
 //
 //   param "mode" has invalid type: Number/Constant
 //
-// declare function endShape(mode: Number/Constant): any;
+declare function endShape(mode?: any): any;
+
+declare const CLOSE: any;
 
 /**
  * Specifies vertex coordinates for quadratic Bezier curves.

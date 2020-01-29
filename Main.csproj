@@ -68,6 +68,7 @@
     <Content Include="Game1\app.css" />
     <Content Include="Game1\index.html" />
     <Content Include="Game2\app.css" />
+    <Content Include="Game2\app.js" />
     <Content Include="Game2\index.html" />
     <Content Include="Game2\p5.js" />
     <Content Include="index.html" />
@@ -106,6 +107,8 @@
           <DevelopmentServerPort>10202</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>http://localhost:63894/</IISUrl>
+          <OverrideIISAppRootUrl>True</OverrideIISAppRootUrl>
+          <IISAppRootUrl>http://localhost:63894/Game2/</IISAppRootUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
