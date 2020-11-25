@@ -76,6 +76,7 @@
     <TypeScriptCompile Include="p5js\p5.global-mode.d.ts" />
     <Content Include="p5js\p5.js" />
     <Content Include="testApp\index.html" />
+    <TypeScriptCompile Include="testApp\script.ts" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>

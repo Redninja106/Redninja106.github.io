@@ -1,0 +1,1 @@
+﻿window.fullscreen(true);
