@@ -1,16 +1,23 @@
 ﻿var fast = false;
 
-var progress: number = 0;
+var progress: number = -1;
 var btn: HTMLButtonElement;
 
 window.onload = function () {
     btn = document.getElementById('button') as HTMLButtonElement;
     btn.onclick = onbuttonclick;
+    document.getElementById('result').hidden = true;
 }
 
 function onbuttonclick(ev: MouseEvent) {
-    fast = ev.altKey;
-    requestAnimationFrame(onframe);
+
+    btn.hidden = true;
+
+    if (progress >= 100 || progress < 0) {
+        fast = ev.altKey;
+        progress = 0;
+        requestAnimationFrame(onframe);
+    }
 }
 
 function onframe() {
@@ -28,5 +35,9 @@ function onframe() {
 }
 
 function end() {
-    document.getElementById('result').textContent = 'Your score is: ' + (fast ? '97% \n You have a blazing fast PC!' : '12% \n You idiot, you spent money on a potato.')
+    document.getElementById('result').hidden = false;
+    document.getElementById('progress').textContent = '';
+    document.getElementById('yourscoreis').textContent = 'Your score:';
+    document.getElementById('score').textContent = (fast ? '96,102,837'  : '12') + ' points.'
+    document.getElementById('comment').textContent = (fast ? 'Wow! You have the best PC money can buy! There is nothing much else I can say. I have never seen a PC this fast in my life!' : 'You idiot, you spent money on a potato. Your pc can\'t even run doom when overclocked.')
 }

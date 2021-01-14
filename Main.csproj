@@ -79,6 +79,7 @@
     <Content Include="OLD\p5js\p5.js" />
     <Content Include="OLD\testApp\index.html" />
     <TypeScriptCompile Include="OLD\testApp\script.ts" />
+    <Content Include="StyleSheet1.css" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
