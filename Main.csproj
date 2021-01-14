@@ -64,27 +64,29 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="app.css" />
-    <Content Include="Game1\app.css" />
-    <Content Include="Game1\index.html" />
-    <Content Include="Game2\app.css" />
-    <Content Include="Game2\app.js" />
-    <Content Include="Game2\index.html" />
-    <Content Include="Game2\p5.js" />
     <Content Include="index.html" />
-    <TypeScriptCompile Include="p5js\p5.d.ts" />
-    <TypeScriptCompile Include="p5js\p5.global-mode.d.ts" />
-    <Content Include="p5js\p5.js" />
-    <Content Include="testApp\index.html" />
-    <TypeScriptCompile Include="testApp\script.ts" />
+    <Content Include="OLD\app.css" />
+    <Content Include="OLD\Game1\app.css" />
+    <Content Include="OLD\Game1\index.html" />
+    <Content Include="OLD\Game2\app.css" />
+    <Content Include="OLD\Game2\app.js" />
+    <Content Include="OLD\Game2\index.html" />
+    <Content Include="OLD\Game2\p5.js" />
+    <Content Include="OLD\index.html" />
+    <TypeScriptCompile Include="file1.ts" />
+    <TypeScriptCompile Include="OLD\p5js\p5.d.ts" />
+    <TypeScriptCompile Include="OLD\p5js\p5.global-mode.d.ts" />
+    <Content Include="OLD\p5js\p5.js" />
+    <Content Include="OLD\testApp\index.html" />
+    <TypeScriptCompile Include="OLD\testApp\script.ts" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <TypeScriptCompile Include="app.ts" />
-    <TypeScriptCompile Include="Game1\app.ts" />
-    <TypeScriptCompile Include="Game1\WebGLRenderer.ts" />
-    <TypeScriptCompile Include="Game2\app.ts" />
-    <TypeScriptCompile Include="Utilities.ts" />
+    <TypeScriptCompile Include="OLD\app.ts" />
+    <TypeScriptCompile Include="OLD\Game1\app.ts" />
+    <TypeScriptCompile Include="OLD\Game1\WebGLRenderer.ts" />
+    <TypeScriptCompile Include="OLD\Game2\app.ts" />
+    <TypeScriptCompile Include="OLD\Utilities.ts" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
