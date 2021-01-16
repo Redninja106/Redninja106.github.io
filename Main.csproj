@@ -64,7 +64,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="index.html" />
+    <Content Include="perf\index.html" />
     <Content Include="OLD\app.css" />
     <Content Include="OLD\Game1\app.css" />
     <Content Include="OLD\Game1\index.html" />
@@ -73,13 +73,13 @@
     <Content Include="OLD\Game2\index.html" />
     <Content Include="OLD\Game2\p5.js" />
     <Content Include="OLD\index.html" />
-    <TypeScriptCompile Include="file1.ts" />
+    <TypeScriptCompile Include="perf\file1.ts" />
     <TypeScriptCompile Include="OLD\p5js\p5.d.ts" />
     <TypeScriptCompile Include="OLD\p5js\p5.global-mode.d.ts" />
     <Content Include="OLD\p5js\p5.js" />
     <Content Include="OLD\testApp\index.html" />
     <TypeScriptCompile Include="OLD\testApp\script.ts" />
-    <Content Include="StyleSheet1.css" />
+    <Content Include="perf\StyleSheet1.css" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
