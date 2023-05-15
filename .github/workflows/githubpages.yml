@@ -22,9 +22,10 @@ jobs:
       run: dotnet workload install wasm-tools
     - name: Publish .NET Core Project
       run: dotnet publish wyan.dev/wyan.dev.csproj -c:Release -o:build/
-    - name: Commit wwwroot to GitHub Pages
-      uses: JamesIves/github-pages-deploy-action@3.7.1
-      with:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        BRANCH: gh-pages
-        FOLDER: build/wwwroot
+    - name: Upload GitHub Pages artifact
+      uses: actions/upload-pages-artifact@v1.0.8
+      with: 
+        path: build/
+    - name: Deploy GitHub Pages site
+      uses: actions/deploy-pages@v2.0.1
+      
