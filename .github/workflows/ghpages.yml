@@ -1,7 +1,7 @@
 # This workflow will build a .NET project
 # For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-net
 
-name: ghpages
+name: Github Pages Deploy
 
 on:
   push:
@@ -28,4 +28,5 @@ jobs:
         path: build/
     - name: Deploy GitHub Pages site
       uses: actions/deploy-pages@v2.0.1
+      id: deployment
       
