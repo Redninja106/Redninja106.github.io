@@ -5,21 +5,81 @@
     <meta charset="utf-8" />
     <title>wyan.dev</title>
     <base href="/" />
-    <link href="css/app.css" rel="stylesheet" />
-    
-    <!-- If you add any scoped CSS files, uncomment the following to load them
-    <link href="wyan.dev.styles.css" rel="stylesheet" /> -->
+    <link href="css/app.css?version=0.6" rel="stylesheet" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <div id="app">Loading...</div>
+    <style>
+        body {
+            background-color: rgb(35, 35, 43);
+            color: rgb(188, 191, 215)
+        }
+
+        div {
+            font-family: 'Roboto Mono', monospace;
+            font-size: 1em;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+
+    <div id="app">
+        Loading...
+        <button>load faster...</button>
+    </div>
 
     <div id="blazor-error-ui">
         An unhandled error has occurred.
         <a href="" class="reload">Reload</a>
         <a class="dismiss">🗙</a>
     </div>
+
     <script src="_framework/blazor.webassembly.js"></script>
+
+
+    <script>
+        //function startAnimation() {
+        //    let canvas = document.getElementById('cover-canvas');
+        //    let context = canvas.getContext('2d');
+
+        //    function animate() {
+
+        //        canvas.width = canvas.parentElement.clientWidth;
+        //        canvas.height = canvas.parentElement.clientHeight;
+
+        //        context.font = "bold 96px verdana";
+        //        context.clearRect(0, 0, canvas.width, canvas.height);
+        //        context.translate(100, 100);
+
+        //        var mat = context.getTransform();
+        //        context.textBaseline = "bottom";
+        //        context.fillStyle = "black";
+        //        context.fillText("Ryan Andersen", 0, 0, canvas.width);
+
+        //        context.setTransform(mat);
+
+        //        context.fillStyle = "white";
+        //        context.fillText("Ryan Andersen", 0, 0, canvas.width);
+
+        //        let text = 'Ryan Andersen';
+
+        //        console.log(1);
+
+        //        requestAnimationFrame(animate);
+        //    }
+
+        //    console.log(1);
+        //    requestAnimationFrame(animate);
+        //};
+    </script>
+
 </body>
 
 </html>
