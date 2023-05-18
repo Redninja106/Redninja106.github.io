@@ -1,0 +1,33 @@
+﻿
+<div class="clickable-list-div">
+    @foreach (var panel in GetPanelsOrEmpty())
+    {
+        <ClickablePanelView Panel="panel" />
+    }
+
+    @if (Panels is null)
+    {
+        <div class="text">it's all empty here...</div>
+    }
+</div>
+
+<style>
+    .clickable-list-div {
+        height: 38rem;
+        background-color: rgb(30, 30, 35);
+        overflow-y: hidden;
+        overflow-x: scroll;
+    }
+
+
+</style>
+
+@code {
+    [Parameter]
+    public IEnumerable<ClickablePanel>? Panels { get; set; }
+
+    private IEnumerable<ClickablePanel> GetPanelsOrEmpty()
+    {
+        return Panels ?? Enumerable.Empty<ClickablePanel>();
+    }
+}

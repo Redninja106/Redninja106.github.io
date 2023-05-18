@@ -1,0 +1,60 @@
+﻿<div class="clickable-panel">
+
+    <div style="height:5%"></div>
+
+    @if (string.IsNullOrEmpty(Panel.Image))
+    {
+        <div class="clickable-image"></div>
+    }
+    else
+    {
+        <img class="clickable-image" src="@Panel.Image" />
+    }
+
+    <h1 class="clickable-title" @onclick="OnClick"> <a class="link" href="@Panel.Content">@Panel.Title</a></h1>
+    <p class="clickable-subtitle">@Panel.Subtitle</p>
+    <p class="clickable-description">@Panel.Description</p>
+</div>
+
+<style>
+    .clickable-panel {
+        margin-inline: 15px;
+        margin: 15px;
+        background-color: rgb(25, 25, 30);
+        width: 24rem;
+        height: 36rem;
+        float: left;
+    }
+
+    .clickable-image {
+        margin-left: 10%;
+        width: 80%;
+        aspect-ratio: 1 / 1;
+        background-color: darkgray;
+    }
+
+    .clickable-title {
+        margin: 1rem;
+        margin-bottom: 0;
+    }
+
+    .clickable-subtitle {
+        color: rgb(158, 161, 185);
+        margin: 1rem;
+        margin-top: 0;
+    }
+
+    .clickable-description {
+        margin: 1rem;
+    }
+</style>
+
+@code {
+    [Parameter]
+    public ClickablePanel Panel { get; set; }
+
+    void OnClick()
+    {
+        
+    }
+}

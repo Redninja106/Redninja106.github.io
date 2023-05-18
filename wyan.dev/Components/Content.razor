@@ -1,33 +1,36 @@
-﻿<div class="content" id="content">
+﻿@inject HttpClient HttpClient
+
+<div class="content" id="content">
     <div class="content-margins">
-        <h1>WHAT</h1>
-        
-        <p>THIS IS MY SITE NOW</p>
-        
-        <p>https://github.com/redninja106</p>
-        
-        <hr class="separator" />
-        
-        <h1>About Me</h1>
-        <p>Bla bla bla Blabla bla blablabla. Bla bla bla Blabla bla blablabla. Bla bla bla Blabla bla blablabla. Bla bla bla Blabla bla blablabla. Bla bla bla Blabla bla blablabla. Bla bla bla Blabla bla blablabla. Bla bla bla Blabla bla blablabla. Bla bla bla Blabla bla blablabla. Bla bla bla Blabla bla blablabla. Bla bla bla Blabla bla blablabla. Bla bla bla Blabla bla blablabla. Bla bla bla Blabla bla blablabla. Bla bla bla Blabla bla blablabla. Bla bla bla Blabla bla blablabla. Bla bla bla Blabla bla blablabla. Bla bla bla Blabla bla blablabla. Bla bla bla Blabla bla blablabla. Bla bla bla Blabla bla blablabla. Bla bla bla Blabla bla blablabla. Bla bla bla Blabla bla blablabla. Bla bla bla Blabla bla blablabla. Bla bla bla Blabla bla blablabla. Bla bla bla Blabla bla blablabla. Bla bla bla Blabla bla blablabla. </p>
-        
-        <hr class="separator" />
+        <div class="text" style="height:25vh"> </div>
 
-        <h1>Past Experience</h1>
-        
-        <div style="height:50vh">it's all empty here...</div>
+        <h1 class="heading">About Me</h1>
+        <div class="text" style="height:50vh">it's all empty here...</div>
 
         <hr class="separator" />
 
-        <h1>Games</h1>
-        <div style="height:50vh">it's all empty here...</div>
+        <h1 class="heading">Previous Projects</h1>
+        <div class="text" style="height:50vh">it's all empty here...</div>
+
+        <hr class="separator" />
+
+        <h1 class="heading">Past Experience</h1>
+        
+        <div class="text" style="height:50vh">it's all empty here...</div>
+
+        <hr class="separator" />
+
+        <h1 class="heading">Games</h1>
+        <div class="text" style="height:50vh">it's all empty here...</div>
         
         <hr class="separator"/>
 
-        <h1>Posts</h1>
-        <div style="height:50vh">it's all empty here...</div>
+        <h1 class="heading">Posts</h1>
+        <ClickablePanelViewList Panels="@(Panels)"/>
 
-        <div class="footer"></div>
+        <div class="text" style="height:25vh"> </div>
+
+        <Footer/>
     </div>
 </div>
 
@@ -48,27 +51,37 @@
         width: 100%;
     }
 
-    h1 {
+    .heading {
         font-family: 'Roboto Mono', monospace;
         font-size: 4em;
         margin: 0px;
     }
 
-    h2 {
+    .subheading {
         font-family: 'Roboto Mono', monospace;
         font-size: 3em;
         margin: 0px;
     }
 
-    div {
-        font-family: 'Roboto Mono', monospace;
-        font-size: 1em;
-    }
 
     .separator {
     }
 </style>
 
 @code {
+    PostPanelProvider postPanelProvider;
+    private IEnumerable<ClickablePanel> panels;
 
+    public IEnumerable<ClickablePanel> Panels => panels ?? Enumerable.Empty<ClickablePanel>();
+
+    protected override Task OnInitializedAsync()
+    {
+        postPanelProvider = new(HttpClient);
+        postPanelProvider.GetPanels().ContinueWith(m => {
+            panels = m.Result;
+            StateHasChanged();
+        });
+
+        return base.OnInitializedAsync();
+    }
 }

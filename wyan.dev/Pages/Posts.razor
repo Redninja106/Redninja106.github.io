@@ -1,0 +1,24 @@
+﻿@page "/posts"
+@inject HttpClient httpClient
+
+<h1>Posts</h1>
+
+@foreach (var panel in Panels)
+{
+    <Wyan.Components.ClickablePanelView Panel="@panel"/>
+}
+
+@code {
+    private PostPanelProvider panelProvider;
+    private IEnumerable<ClickablePanel>? panels;
+
+    public IEnumerable<ClickablePanel> Panels => panels ?? Enumerable.Empty<ClickablePanel>();
+
+    protected override async Task OnInitializedAsync()
+    {
+        panelProvider = new(httpClient);
+        panels = await panelProvider.GetPanels();
+        
+        base.OnInitialized();
+    }
+}
