@@ -41,7 +41,7 @@ jobs:
     - name: Checkout SF
       uses: actions/checkout@v3
       with:
-        repository: https://github.com/Redninja106/simulationframework
+        repository: redninja106/simulationframework
         path: repos/simulationframework
     
     - name: Build SF
