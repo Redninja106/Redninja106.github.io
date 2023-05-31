@@ -51,7 +51,7 @@ jobs:
       run: dotnet tool update -g docfx
     
     - name: Build SF Docs
-      run: docfx
+      run: docfx repos/simulationframework/docfx.json
       
     - name: Copy to site output
       run: cp -r repos/simulationframework/_site build/wwwroot/simulationframework 
