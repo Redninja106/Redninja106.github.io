@@ -52,14 +52,10 @@ jobs:
       run: dotnet tool update -g docfx
     
     - name: Build SF Docs
-      run: docfx repos/simulationframework/docfx.json
-            
-    - run: ls repos/simulationframework/_site 
-      
+      run: docfx repos/simulationframework/docfx/docfx.json
+  
     - name: Copy to site output
-      run: cp -r repos/simulationframework/_site build/wwwroot/simulationframework 
-      
-    - run: ls repos/simulationframework/_site 
+      run: cp -r repos/simulationframework/docfx/_site build/wwwroot/simulationframework
       
     - name: Setup Pages
       uses: actions/configure-pages@v3
