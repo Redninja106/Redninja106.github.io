@@ -52,9 +52,13 @@ jobs:
     
     - name: Build SF Docs
       run: docfx repos/simulationframework/docfx.json
+            
+    - run: ls repos/simulationframework/_site 
       
     - name: Copy to site output
       run: cp -r repos/simulationframework/_site build/wwwroot/simulationframework 
+      
+    - run: ls repos/simulationframework/_site 
       
     - name: Setup Pages
       uses: actions/configure-pages@v3
